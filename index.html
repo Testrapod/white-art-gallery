@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- styles css -->
+    <link rel="stylesheet" href="css/styles.css">
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+    <title>White Art Gallery</title>
+</head>
+<body>
+	
+	<!-- BGM button -->
+	<i id="bgm_button" class="bi bi-volume-up"></i>
+
+	<!-- Enter -->
+    <div id="enter" class="container width-layout">
+        <div class="row">
+			<!-- header -->
+			<h1 class="white-text header-text text-center">White Art Gallery</h1>
+			
+			<!-- enter input -->
+			<div class="input-group mt-3">
+				<input id="key_input" type="number" pattern="\d*" class="form-control" placeholder="입장코드를 입력해 주세요" aria-label="secret-key" aria-describedby="enter_button">
+				<button id="enter_button" class="btn btn-secondary" type="button">입장하기</button>
+			</div>
+			
+			<!-- footer -->
+			<div class="white-space"></div>
+        </div>
+    </div>
+	
+	<!-- Gallery -->
+    <div id="gallery" class="container width-layout">
+        <div class="row">
+			<!-- header -->
+			<div class="text-center white-text">
+				<h1 class="header-text">White Art Gallery</h1>
+				<span>
+					환영합니다!<br/>
+					본 전시관은 💙하은💙작가가 찍은 사진 중<br/>
+					❤️동해❤️작가가 선정한 12개의 사진을 전시중입니다.<br/>
+					좋은 시간 보내시길 바랍니다.
+				</span>
+			</div>
+			
+			<div class="text-center mt-4">
+				<button id="profile_button_gallery" type="button" class="btn btn-outline-light custom-button">작가 프로필</button>
+				<button id="photo_button_gallery" type="button" class="btn btn-outline-light custom-button">사진 전시관</button>
+				<button id="survey_button_gallery" type="button" class="btn btn-outline-light custom-button">설문 조사</button>
+				<button id="gift_button_gallery" type="button" class="btn btn-outline-light custom-button">기념품샵</button>
+			</div>
+			
+			<!-- footer -->
+			<div class="half-white-space"></div>
+        </div>
+    </div>
+	
+	<!-- Gallery > Profile -->
+    <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div id="profile_modal" class="modal-content white-text">
+				<div class="modal-header" style="border-bottom: 0px;">
+					<h5 class="modal-title" id="profileModalLabel">작가 프로필</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					
+					<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="row justify-content-center">
+									<img class="profile-img" src="img/profile/lala.jpg"/>
+								</div>
+								<div class="row text-end">
+									<span>윤하은 (Lala)<br/>1999.05.20</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="row justify-content-center">
+									<img class="profile-img" src="img/profile/eastsea.jpg"/>
+								</div>
+								<div class="row text-end">
+									<span>양동해 (East Sea)<br/>1998.05.22</span>
+								</div>
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+					
+				</div>
+				<div class="modal-footer" style="border-top: 0px;">
+					<button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">나가기</button>
+				</div>
+            </div>
+        </div>
+    </div>
+	
+	<!-- Gallery > Photo -->
+	<div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div id="gallery_modal" class="modal-content white-text">
+				<div class="modal-header" style="border-bottom: 0px;">
+					<h5 class="modal-title" id="photoModalLabel">사진 전시관</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					
+					<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11" aria-label="Slide 12"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="12" aria-label="Slide 13"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="13" aria-label="Slide 14"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="14" aria-label="Slide 15"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="15" aria-label="Slide 16"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="img/gallery/gallery1.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>하은이와 함께라면 💕 (01.23 / 경복궁)</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/gallery2.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>윙크 😉 (2.12 / 홍대)</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/gallery3.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>하은이 손? 절대 안놔버려~ (2.27 / 서울숲)</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/gallery4.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>하은이는 무엇을 보고 있는걸까요? 😆 (4.2 / 뚝섬)</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/gallery5.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>동해 손 치우기 3초전.. 🥲 (4.2 / 건대입구)</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/gallery6.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>🌸을 보는 동해 (4.8 / 왕십리)</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/gallery7.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>까치발 낑낑 😅 (4.9 / 혜화)</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/gallery8.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>하은(=인생)네컷 📸 (4.9 / 혜화)</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/gallery9.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>❤️🔥💧💙 (4.23 / 명동)</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/gallery10.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>vv = w (둘이 하나가 된 순간) (4.23 / 명동)</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/gallery11.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>거울 세계의 공주와 왕자 🪞 (5.13 / 서울숲)</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/gallery12.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>킹복 갓이트 🎠 (5.14 / 에버랜드)</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/bonus1.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>(뽀나스) 넘나 이쁜 하은 💚</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/bonus2.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>(뽀나스) 넘나 귀여운 하은 💙</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/bonus3.jpg" class="d-block w-100 gallery-img">
+								<div class="row text-center">
+									<span>(뽀나스) 넘나 사랑스러운 하은 🤎</span>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/gallery/bonus4.jpg" class="d-block w-100 gallery-img" onclick="openLetter();">
+								<div class="row text-center">
+									<span>그리고 마지막.. (사진을 클릭해주세요)</span>
+								</div>
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+					
+				</div>
+				<div class="modal-footer" style="border-top: 0px;">
+					<button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">나가기</button>
+				</div>
+            </div>
+        </div>
+    </div>
+	
+	<!-- Survey -->
+    <div class="modal fade" id="surveyModal" tabindex="-1" aria-labelledby="surveyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div id="survey_modal" class="modal-content white-text">
+				<div class="modal-header" style="border-bottom: 0px;">
+					<h5 class="modal-title" id="surveyModalLabel">설문 조사</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+							<div class="col">
+								<label for="name_input_survey" class="col-form-label">이름:</label>
+								<input type="text" class="form-control" id="name_input_survey" value="윤하은">
+							</div>
+							<div class="col">
+								<label for="birthday_input_survey" class="col-form-label">생일:</label>
+								<input type="date" class="form-control" id="birthday_input_survey" value="1999-05-20">
+							</div>
+						</div>
+						<div class="mt-3 text-center">
+							좋아하는 것들을 적어주세요.<br/>
+							아무거나 좋습니다! 다만,, 사람은 빼고 적어주세요 😅<br/>
+							(ex. 숫자, 색깔, 꽃, 음식, 장소, 취미, 음악, 영화 ..)
+						</div>
+						<div>
+							<label for="like1_input_survey" class="col-form-label">좋아하는 것 1:</label>
+							<div class="row">
+								<div class="col-4">
+									<select id="like1_select_survey" class="form-select" aria-label="Default select example">
+										<option value="기타" selected>-</option>
+										<option value="숫자">숫자</option>
+										<option value="색깔">색깔</option>
+										<option value="꽃">꽃</option>
+										<option value="음식">음식</option>
+										<option value="장소">장소</option>
+										<option value="취미">취미</option>
+										<option value="음악">음악</option>
+										<option value="영화">영화</option>
+									</select>
+								</div>
+								<div class="col"><input type="text" class="form-control" id="like1_input_survey"></div>
+							</div>
+						</div>
+						<div>
+							<label for="like2_input_survey" class="col-form-label">좋아하는 것 2:</label>
+							<div class="row">
+								<div class="col-4">
+									<select id="like2_select_survey" class="form-select" aria-label="Default select example">
+										<option value="기타" selected>-</option>
+										<option value="숫자">숫자</option>
+										<option value="색깔">색깔</option>
+										<option value="꽃">꽃</option>
+										<option value="음식">음식</option>
+										<option value="장소">장소</option>
+										<option value="취미">취미</option>
+										<option value="음악">음악</option>
+										<option value="영화">영화</option>
+									</select>
+								</div>
+								<div class="col"><input type="text" class="form-control" id="like2_input_survey"></div>
+							</div>
+						</div>
+						<div>
+							<label for="like3_input_survey" class="col-form-label">좋아하는 것 3:</label>
+							<div class="row">
+								<div class="col-4">
+									<select id="like3_select_survey" class="form-select" aria-label="Default select example">
+										<option value="기타" selected>-</option>
+										<option value="숫자">숫자</option>
+										<option value="색깔">색깔</option>
+										<option value="꽃">꽃</option>
+										<option value="음식">음식</option>
+										<option value="장소">장소</option>
+										<option value="취미">취미</option>
+										<option value="음악">음악</option>
+										<option value="영화">영화</option>
+									</select>
+								</div>
+								<div class="col"><input type="text" class="form-control" id="like3_input_survey"></div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer" style="border-top: 0px;">
+					<button id="submit_button_survey" type="button" class="btn btn-outline-light" data-bs-dismiss="modal">제출</button>
+				</div>
+            </div>
+        </div>
+    </div>
+	
+	<!-- Gift -->
+    <div class="modal fade" id="giftModal" tabindex="-1" aria-labelledby="giftModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div id="gift_modal" class="modal-content white-text">
+				<div class="modal-header" style="border-bottom: 0px;">
+					<h5 class="modal-title" id="giftModalLabel">기념품샵</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					
+					<video id="gift_video" poster="img/gift/you_are_my_sunshine.jpg" controls playsinline>
+						<source src="img/gift/you_are_my_sunshine.mp4" type="video/mp4">
+					</video>
+					<div class="row text-center">
+						<span>You Are My Sunshine ☀️</span>
+					</div>
+					
+				</div>
+				<div class="modal-footer" style="border-top: 0px;">
+					<button id="pause_button_gift" type="button" class="btn btn-outline-light" data-bs-dismiss="modal">나가기</button>
+				</div>
+            </div>
+        </div>
+    </div>
+
+	<!-- alert -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </symbol>
+    </svg>
+    <div id="alert_fail" class="custom-alert">
+        <div class="alert alert-danger d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+            <div id="alert_message"></div>
+        </div>
+    </div>
+	
+	<!-- loading -->
+	<div id="loading" class="spinner-border text-light" role="status">
+		<span class="visually-hidden">Loading...</span>
+	</div>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- html2canvas js-->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+	<!-- kakak api -->
+	<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <!-- scripts js -->
+    <script type="text/javascript" src="js/function.js"></script>
+    <script type="text/javascript" src="js/kakao_message.js"></script>
+    <script type="text/javascript" src="js/index_ready.js"></script>
+</body>
+</html>

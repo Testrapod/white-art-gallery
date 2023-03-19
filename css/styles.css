@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/* font 적용 */
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+body { font-family: 'Do Hyeon', sans-serif; }
+
+
+/* 배경 */
+body {
+	height: 100vh;
+    /* overflow: hidden; 스크롤 막기 */
+	background-image: url("../img/totoro1_blur.jpg");
+	background-repeat : no-repeat;
+    background-size : cover;
+	background-position: center;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+
+/* 시스템 태그 속성 변경 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* bootstrap 코드 */
+.btn:hover { text-shadow: 0px 0px 0px #000; }
+.btn:focus {
+	box-shadow: none;
+	text-shadow: 0px 0px 0px #000;
+}
+.form-check-input:focus { box-shadow: none; }
+
+.modal-content {
+	/* background-image: url("../img/kaze1_blur.jpeg"); */
+	background-repeat : no-repeat;
+    background-size : cover;
+	background-position: center;
+	
+	border: 0px;
+}
+
+
+/* pc 화면 */
+#bgm_button {
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	
+	color: white;
+	font-size: 25px;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.header-text {
+    font-size: 36px;
+    /* font-style: italic; */
+}
+.footer-text { font-size: xx-small; }
+.white-text {
+	color: white;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.width-layout {
+    left: 5%;
+    width: 90%;
+}
+.title-text-layout {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: x-large;
+}
+.button-layout {
+    margin-top: 10px;
+    /* margin-bottom: 25px; */
+}
+
+.custom-button {
+	width: 50%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-shadow: 1px 1px 1px #000;
+}
+.left-button { width: 49%; float:left; }
+.right-button { width: 49%; float:right; }
+
+.profile-img {
+	border: 5px solid white;
+	
+	width: 90%;
+	padding: 0px;
+	margin-bottom: 10px;
+}
+.gallery-img {
+	border: 5px solid white;
+	margin-bottom: 10px;
+}
+#gift_video {
+	width: 100%;
+	text-shadow: 0px 0px 0px #000;
+}
+
+
+.no-padding { padding: 0px; }
+.half-white-space {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.white-space {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#gallery { display: none; }
+#profile_modal { background-image: url("../img/kaze1_blur.jpeg"); }
+#gallery_modal { background-image: url("../img/majo002_blur.jpeg"); }
+#survey_modal { background-image: url("../img/chihiro043_blur.jpeg"); }
+#gift_modal { background-image: url("../img/ponyo012_blur.jpeg"); }
+
+
+/* alert */
+@keyframes fadeIn { /* animation */
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+.custom-alert {
+    position: fixed;
+    bottom: 15px;
+    left: 5%;
+    width: 90%;
+    
+    display: none;
+    animation: fadeIn 0.4s;
+}
+
+/* loading */
+#loading {
+	display: none;
+	position: fixed;
+	top: calc(50% - (1rem));
+	left: calc(50% - (1rem));
+}
