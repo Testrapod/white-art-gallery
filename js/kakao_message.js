@@ -8,35 +8,35 @@ function sendKakaoMessage(data) {
 
             headerTitle: "💙하은's Favorite Things💙",
             headerLink: {
-                mobileWebUrl: 'https://brienzb.github.io/white-art-gallery/',
-                webUrl: 'https://brienzb.github.io/white-art-gallery/',
+                mobileWebUrl: 'https://testrapod.github.io/white-art-gallery/',
+                webUrl: 'https://testrapod.github.io/white-art-gallery/',
             },
             contents: [
                 {
                     title: data.like1,
                     description: data.like1_option,
-                    imageUrl: 'https://brienzb.github.io/white-art-gallery/img/totoro1.jpeg',
+                    imageUrl: 'https://testrapod.github.io/white-art-gallery/img/totoro1.jpeg',
                     link: {
-                        mobileWebUrl: 'https://brienzb.github.io/white-art-gallery/',
-                        webUrl: 'https://brienzb.github.io/white-art-gallery/',
+                        mobileWebUrl: 'https://testrapod.github.io/white-art-gallery/',
+                        webUrl: 'https://testrapod.github.io/white-art-gallery/',
                     },
                 },
                 {
                     title: data.like2,
                     description: data.like2_option,
-                    imageUrl: 'https://brienzb.github.io/white-art-gallery/img/majo018.jpeg',
+                    imageUrl: 'https://testrapod.github.io/white-art-gallery/img/majo018.jpeg',
                     link: {
-                        mobileWebUrl: 'https://brienzb.github.io/white-art-gallery/',
-                        webUrl: 'https://brienzb.github.io/white-art-gallery/',
+                        mobileWebUrl: 'https://testrapod.github.io/white-art-gallery/',
+                        webUrl: 'https://testrapod.github.io/white-art-gallery/',
                     },
                 },
                 {
                     title: data.like3,
                     description: data.like3_option,
-                    imageUrl: 'https://brienzb.github.io/white-art-gallery/img/park1.jpeg',
+                    imageUrl: 'https://testrapod.github.io/white-art-gallery/img/park1.jpeg',
                     link: {
-                        mobileWebUrl: 'https://brienzb.github.io/white-art-gallery/',
-                        webUrl: 'https://brienzb.github.io/white-art-gallery/',
+                        mobileWebUrl: 'https://testrapod.github.io/white-art-gallery/',
+                        webUrl: 'https://testrapod.github.io/white-art-gallery/',
                     },
                 },
             ],
@@ -44,8 +44,8 @@ function sendKakaoMessage(data) {
                 {
                     title: '다시하기',
                     link: {
-                        mobileWebUrl: 'https://brienzb.github.io/white-art-gallery/',
-                        webUrl: 'https://brienzb.github.io/white-art-gallery/',
+                        mobileWebUrl: 'https://testrapod.github.io/white-art-gallery/',
+                        webUrl: 'https://testrapod.github.io/white-art-gallery/',
                     },
                 },
             ],
